@@ -84,6 +84,8 @@ These rules apply across Draft and Rewrite modes when deciding which sections to
 - Add `References` when claims depend on external docs, benchmarks, specs, issues, or prior decisions.
 - Remove sections that do not answer a reader question.
 
+In Draft and Rewrite modes, verify each condition above against the document before returning it.
+
 ### Draft Mode
 
 Create a new document from the user's goal and available facts.
@@ -96,7 +98,8 @@ Execute in the following order, do not reverse:
 3. **Classify the document's job.** Read `Document job` from the document template. Identify what the document must accomplish for its reader.
 4. **Set the boundary and abstraction level.** State what this document will solve and what it will not solve.
 5. **Draft with structured reasoning.** Load and apply `references/writing-guide.md`. Based on the document template, write to help the reader judge, not just receive information.
-6. **Strip AI patterns from prose.** Load and apply `references/anti-ai.md` to remove formulaic phrasing from the draft.
+6. **Verify template completeness.** Compare the draft against the template's section list. For each section marked Required: confirm it exists in the draft, or explicitly note why it was omitted (scope too small, no applicable content from source material). Apply "Choosing sections" rules to check whether Non-goals, Risks, Validation, Open questions, or References should be added based on the document's content.
+7. **Strip AI patterns from prose.** Load and apply `references/anti-ai.md` to remove formulaic phrasing from the draft.
 
 Return the requested document. Do not append a change summary unless the user asked for process notes.
 
@@ -111,7 +114,7 @@ Execute in the following order, do not reverse:
 2. **Diagnose structural problems.** Read the source text and list concrete issues: unclear section boundaries, repeated arguments, mixed concerns in single paragraphs, missing logical flow, or sections that do not serve the reader.
 3. **Choose structural guide.** If `Document type` matches a template from "References" section, load it as a reorganization reference — not a mandatory form.
 4. **Reshape.** Reorder sections, rewrite headings, merge duplicates, split mixed paragraphs, and adjust flow to match the diagnosis. Load and apply `references/writing-guide.md` to keep prose direct with stable abstraction levels. Preserve all source meaning, facts, constraints, and uncertainty.
-5. **Fill structural gaps.** Add missing sections per "Choosing sections" rules, but only when the source text provides enough material to support them. If a claim is useful but unsupported, mark it as `pending confirmation`.
+5. **Fill structural gaps.** If a template was loaded in step 3, check each Required section — add missing ones when source text supports them, mark as `pending confirmation` when material is insufficient. Apply "Choosing sections" rules for conditional sections (Non-goals, Risks, Validation, Open questions, References). Only add sections the source text provides enough material to support.
 6. **Strip AI patterns from prose.** Load and apply `references/anti-ai.md` to remove formulaic phrasing introduced during restructuring.
 
 Return the full rewritten document unless the user asks for a partial rewrite.
@@ -137,3 +140,6 @@ Before returning the document, verify:
 
 [] The document states the problem, purpose, or reader job it serves.
 [] The output matches the selected mode: draft creates, rewrite reshapes, polish edits in place.
+[] (Draft/Rewrite) Every Required section from the template is present or has an explicit omission note.
+[] (Draft/Rewrite) The five "Choosing sections" conditions have been evaluated — Non-goals, Risks, Validation, Open questions, References are present when their trigger conditions are met.
+[] At least half of h2/h3 headings carry a judgment, conclusion, or qualifier — not just a topic label.
