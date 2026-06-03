@@ -8,7 +8,7 @@ metadata:
 
 # Read: Fetch Any URL or PDF as Markdown
 
-Prefix your first line with 🎛 inline, not as its own paragraph.
+Prefix your first line with 🎧 inline, not as its own paragraph.
 
 Convert any URL or local PDF to clean Markdown. No analysis, no summary, no discussion of the content unless explicitly asked after the fetch.
 

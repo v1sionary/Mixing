@@ -8,7 +8,7 @@ metadata:
 
 # Think: Design and Validate Before You Build
 
-Prefix your first line with 🎛 inline, not as its own paragraph.
+Prefix your first line with 🎧 inline, not as its own paragraph.
 
 Turn a rough idea into an approved plan. No code, no scaffolding, no pseudo-code until the user approves.
 

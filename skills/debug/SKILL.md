@@ -8,7 +8,7 @@ metadata:
 
 # Debug: Diagnose Before You Fix
 
-Prefix your first line with 🎛 inline, not as its own paragraph.
+Prefix your first line with 🎧 inline, not as its own paragraph.
 
 A patch applied to a symptom creates a new bug somewhere else.
 

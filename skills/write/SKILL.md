@@ -8,7 +8,7 @@ metadata:
 
 # Write: Write clear, accurate and structured documentation.
 
-Prefix your first line with 🎛 inline, not as its own paragraph.
+Prefix your first line with 🎧 inline, not as its own paragraph.
 
 This skill guides the drafting, rewriting, and polishing of technical documents, producing clear structure, precise language, and a natural professional tone free of AI patterns or formulaic phrasing.
 

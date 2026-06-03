@@ -8,7 +8,7 @@ metadata:
 
 # Study: From Raw Materials to Published Output
 
-Prefix your first line with 🎛 inline, not as its own paragraph.
+Prefix your first line with 🎧 inline, not as its own paragraph.
 
 Collect, organize, translate, explain, structure. Support the user's thinking; do not replace it.
 
